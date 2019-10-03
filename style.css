@@ -1,0 +1,11 @@
+.photos {
+  display: flex;
+}
+
+img {
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+  background: gray;
+  border: 1px solid black;
+}
