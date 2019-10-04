@@ -10,10 +10,14 @@ function getDogImages() {
 
 function displayImages(responseJson) {
   input = document.getElementById("numOfDogs").value;
-  $("#photos").empty();
-  console.log(responseJson);
-  for (let i = 0; i < input && i < 50; i++) {
-    $("#photos").append(`<img src="${responseJson.message[i]}">`);
+  if (input > 50) {
+    alert("Cannot exceed 50");
+  } else {
+    $("#photos").empty();
+    console.log(responseJson);
+    for (let i = 0; i < input && i < 50; i++) {
+      $("#photos").append(`<img src="${responseJson.message[i]}">`);
+    }
   }
 }
 
